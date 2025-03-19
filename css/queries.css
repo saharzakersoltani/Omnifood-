@@ -1,0 +1,392 @@
+/*  rem and em do NOT depend on html font-size in media queries!
+Instead, 1rem = 1em = 16px */
+
+/******************/
+/* BELOW 1344px(Smaller desktops)*/
+/******************/
+@media (max-width: 84em) {
+  .hero-container {
+    width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .grid-testimonial-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/******************/
+/* BELOW 1200px (Landscape Tablets)*/
+/******************/
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-teritiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero-container {
+    gap: 4.8rem;
+  }
+
+  .testimonials-container {
+    padding: 3.2rem 1.6rem 3.2rem 2.2rem !important;
+  }
+
+  .features-description {
+    font-size: 1.7rem;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .cta {
+    height: 55rem;
+  }
+
+  .cta-header {
+    font-size: 3.6rem;
+  }
+
+  .grid-footer {
+    grid-template-columns: 1.41fr 1.4fr 1fr 1fr 1fr;
+  }
+}
+
+/******************/
+/* BELOW 1080px */
+/******************/
+@media (max-width: 67.5em) {
+  .hero-container {
+    width: 100%;
+  }
+}
+
+/******************/
+/* BELOW 930px (Tablets) */
+/******************/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-description {
+    margin-bottom: 3.2rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .logo-img {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .details {
+    padding: 2.4rem 3.2rem 2.4rem 3.2rem;
+  }
+
+  .testimonials-container {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  .grid-testimonial-gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cta {
+    grid-template-columns: 3fr 2fr;
+    height: 68rem;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .meal-attribute span {
+    text-align: start;
+    line-height: 1.2;
+  }
+
+  /* Mobile navigation */
+  .btn-mobile-nav {
+    display: block;
+    /* z-index: 9999; */
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+
+    /* HIDE NAVIGATION */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .btn-mobile-nav [name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .btn-mobile-nav [name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/******************/
+/* BELOW 700px */
+/******************/
+@media (max-width: 44em) {
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list {
+    justify-self: center;
+    grid-column: 1/-1;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .grid-footer {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .logo-part,
+  .contact-part {
+    grid-column: span 3;
+    margin-top: 4.8rem;
+  }
+
+  .footer-parts {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+
+  .cta {
+    height: 100%;
+  }
+}
+
+/******************/
+/* BELOW 550px (Phones)*/
+/******************/
+@media (max-width: 34em) {
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .logo-img {
+    height: 1.2rem;
+  }
+
+  .section-featured {
+    padding: 4.8rem 0 1.6rem 0;
+  }
+
+  .section-how {
+    padding: 6.4rem 0 3.2rem 0;
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .hero-container {
+    padding: 0 3.2rem;
+  }
+
+  .btn:link,
+  .btn:visited {
+    padding: 1.6rem 2.4rem;
+  }
+
+  .grid-testimonial {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-flex {
+    gap: 6.2rem;
+  }
+
+  .grid-testimonial-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+}
+
+/****************************/
+/* Fixing Safari flexbox gap*/
+/***************************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
